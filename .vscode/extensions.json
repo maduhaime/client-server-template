@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "bierner.github-markdown-preview",
+    "bierner.markdown-preview-github-styles",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "thinker.sort-json",
+    "Vue.volar"
+  ]
+}

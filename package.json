@@ -1,25 +1,53 @@
 {
-  "name": "client-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/dist/index.js",
-  "type": "module",
-  "scripts": {
-    "server:build": "npx tsc --project ./server/tsconfig.json",
-    "server:start": "node ./server/dist/index.js",
-    "server:dev": "tsx watch ./server/src"
-  },
   "author": "Marc-Antoine Duhaime",
-  "license": "ISC",
-  "devDependencies": {
-    "@tsconfig/node20": "^20.1.4",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.12.7",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5"
-  },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
-  }
+    "express": "^4.19.2",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/express": "^4.17.21",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.12.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "^1.5.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/test-utils": "^2.4.5",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.1",
+    "vite": "^5.2.8",
+    "vite-plugin-vue-devtools": "^7.0.25",
+    "vitest": "^1.4.0",
+    "vue-tsc": "^2.0.11"
+  },
+  "license": "ISC",
+  "main": "server/dist/index.js",
+  "name": "client-server",
+  "scripts": {
+    "client:build": "vue-tsc -p ./client/tsconfig.json && vite build --config ./client/vite.config.ts",
+    "client:dev": "vite ./client",
+    "client:lint": "eslint ./client/src --ext .vue,.js,.ts --fix --ignore-path .gitignore",
+    "client:preview": "vite preview --config ./client/vite.config.ts",
+    "client:test": "vitest run --coverage",
+    "client:test:watch": "vitest",
+    "format": "prettier --write ./",
+    "server:build": "npx tsc -p ./server/tsconfig.json",
+    "server:dev": "tsx watch ./server/src",
+    "server:lint": "eslint ./server/src --ext .js,.ts --fix --ignore-path .gitignore",
+    "server:start": "node ./server/dist/index.js"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }
