@@ -12,6 +12,7 @@
   "author": "Marc-Antoine Duhaime",
   "license": "ISC",
   "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.7",
     "tsx": "^4.7.2",
