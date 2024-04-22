@@ -1,0 +1,24 @@
+{
+  "name": "client-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/dist/index.js",
+  "type": "module",
+  "scripts": {
+    "server:build": "npx tsc --project ./server/tsconfig.json",
+    "server:start": "node ./server/dist/index.js",
+    "server:dev": "tsx watch ./server/src"
+  },
+  "author": "Marc-Antoine Duhaime",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
