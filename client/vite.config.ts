@@ -7,17 +7,8 @@ import vueDevTools from 'vite-plugin-vue-devtools';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      },
-      output: {
-        dir: resolve(__dirname, 'client/dist'),
-      },
-    },
-  },
+  root: resolve(__dirname, './'),
+  envDir: '../',
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {

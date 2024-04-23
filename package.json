@@ -36,6 +36,7 @@
   "main": "server/dist/index.js",
   "name": "client-server",
   "scripts": {
+    "build": "npm run server:build && npm run client:build",
     "client:build": "vue-tsc -p ./client/tsconfig.json && vite build --config ./client/vite.config.ts",
     "client:dev": "vite ./client",
     "client:lint": "eslint ./client/src --ext .vue,.js,.ts --fix --ignore-path .gitignore",
@@ -46,7 +47,7 @@
     "server:build": "npx tsc -p ./server/tsconfig.json",
     "server:dev": "tsx watch ./server/src",
     "server:lint": "eslint ./server/src --ext .js,.ts --fix --ignore-path .gitignore",
-    "server:start": "node ./server/dist/index.js"
+    "start": "node ./server/dist/index.js"
   },
   "type": "module",
   "version": "1.0.0"
