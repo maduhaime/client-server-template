@@ -5,7 +5,7 @@
     "bierner.markdown-preview-github-styles",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "thinker.sort-json",
+    // "thinker.sort-json",
     "Vue.volar"
   ]
 }

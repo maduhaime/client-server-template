@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
+import { onMounted } from 'vue';
+
 import HelloWorld from './components/HelloWorld.vue';
+
+import { test } from '@/lib/test';
+
+onMounted(() => {
+  test();
+});
 </script>
 
 <template>
